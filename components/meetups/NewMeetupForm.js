@@ -29,7 +29,12 @@ function NewMeetupForm(props) {
 
   return (
     <Card>
-      <form className={classes.form} onSubmit={submitHandler}>
+      <form
+        className={classes.form}
+        onSubmit={() => {
+          alert("LOCKED!");
+        }}
+      >
         <div className={classes.control}>
           <label htmlFor="title">Meetup Title</label>
           <input type="text" required id="title" ref={titleInputRef} />
