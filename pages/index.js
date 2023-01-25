@@ -31,7 +31,7 @@ function HomePage(props) {
 // }
 
 export async function getStaticProps() {
-  const client = await MongoClient.connect(process.env.API_MONGODB);
+  const client = await MongoClient.connect(process.env.NEXT_PUBLIC_API_MONGODB);
   const db = client.db();
 
   const meetupsCollection = db.collection("meetups");

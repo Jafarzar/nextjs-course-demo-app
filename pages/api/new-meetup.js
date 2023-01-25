@@ -6,7 +6,9 @@ async function handler(req, res) {
   if (req.method === "POST") {
     const data = req.body;
 
-    const client = await MongoClient.connect(process.env.API_MONGODB);
+    const client = await MongoClient.connect(
+      process.env.NEXT_PUBLIC_API_MONGODB
+    );
     const db = client.db();
 
     const meetupsCollection = db.collection("meetups");
